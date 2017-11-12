@@ -1,0 +1,41 @@
+<!--
+  Generated template for the SettingsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Settings</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <h2>NGRX &amp; Ionic Storage</h2>
+  <p>Changes to these settings are persisted via Cordova-SQLite-Storage.</p>
+  <p>Try changing the settings and refresh the page (or restart the app).</p>
+
+  <ion-list>
+    <ion-item>
+      <ion-label>My Boolean Setting</ion-label>
+      <ion-toggle
+        [ngModel]="myBooleanSetting"
+        (ngModelChange)="updateBooleanSetting('myBooleanSetting', $event)"
+      ></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>My String Setting</ion-label>
+      <ion-input type="text"
+        [ngModel]="myStringSetting"
+        (ngModelChange)="updateStringSetting('myStringSetting', $event)"
+      ></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>
